@@ -65,6 +65,7 @@
   > leave the shell with exit()
 # create environmental variable to store secret key in the root folder:
   > pip install python-dotenv
+  > create a .env file in the root 
   > copy the new randoom secret key from the shell  and debug=true and paste it there
   > remove any white space and quotations like so:
     > SECRET_KEY =django-insecure-c@(q7am@&-feg*xp*@@l$*!s#4=*-65-^^ck6v#5(^0s10a^p1
@@ -79,7 +80,7 @@
     > DEBUG = True
     > ALLOWED_HOSTS = ["*"]
 # in the manage.py file:
-  > from core.settings import base_settings i
+  > from core.settings import base_settings 
   > in the main function, make sure that it runs local settings when debug=true and production settings when debug is false like so:
   > def main():
    
