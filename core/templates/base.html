@@ -10,11 +10,12 @@
   -->
   <link rel="shortcut icon" href="{% static 'images/red-icon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'css/about.css' %}"> 
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>{% block title %}Shae's Blog{% endblock title %}</title>
   </head>
-  <body ">
+  <body >
     {% include "navbar.html" %} {% block content %}{% endblock %} 
     {% include "footer.html" %} 
     <script src="{% static "js/script.js" %}"></script>

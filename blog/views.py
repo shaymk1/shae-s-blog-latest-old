@@ -15,11 +15,13 @@ def home(request):
     return render(request, "blog/index.html", context)
 
 
-# def trending_tags(request):
-#     model = Tags
-#     tags = Tags.objects.all()
-#     context = {
-#         "model": model,
-#         "tags": tags
-#     }
-#     return render(request, "blog/index.html", context)
+def about(request):
+    return render(request, "blog/about.html")
+
+
+def post(request):
+    return render(request, "blog/post.html")
+
+
+def contact(request):
+    return render(request, "blog/contact.html")
