@@ -1,4 +1,5 @@
-from unicodedata import category
+# from unicodedata import category
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -20,7 +21,7 @@ class Post(models.Model):
         default="2 Min Read"
         )
     title = models.CharField(max_length=250)
-    # slug = models.SlugField(max_length=250, unique=True)
+    slug = models.SlugField(unique=True, null=True)  # max_length=250,unique=True 
     intro = models.TextField(blank=True)
     content = models.TextField(blank=True)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
@@ -29,7 +30,7 @@ class Post(models.Model):
     )
     author_image = models.ImageField(
          null=True, blank=True, 
-         upload_to= "articles",
+         upload_to="articles",
          default="placeholder.png")
 
     class Meta:

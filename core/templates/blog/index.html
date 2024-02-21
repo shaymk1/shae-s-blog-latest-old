@@ -46,13 +46,13 @@
     <div class="container">
       <section class="blog">
         <h2 class="h2">Latest Blog Post</h2>
-
-        
-
         <div class="blog-card-group">
           {% comment %} blog-1 {% endcomment %}
           {% for post in posts  %}
+
+         
           <div class="blog-card">
+            
             <div class="blog-card-banner">
               <img
                 src={{post.image.url}}
@@ -66,9 +66,11 @@
               <button class="blog-topic text-tiny">{{post.category}}</button>
 
               <h3>
-                <a href="#" class="h3">
+                
+                <a href="{% url 'detailed_post' post.slug %}" class="h3">
                   {{post.title}}
                 </a>
+              
               </h3>
 
               <p class="blog-text">
@@ -97,6 +99,8 @@
               </div>
             </div>
           </div>
+          <button class="btn load-more" style = "background: hsl(216, 15%, 52%);color:white;">Read More</button>
+      
           {% endfor %}
 
         <button class="btn load-more" style = "background: hsl(216, 15%, 52%);color:white;">Load More</button>
