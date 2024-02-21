@@ -358,7 +358,8 @@ header .btn-group {
 
 .mobile-nav .nav-link {
   font-size: var(--fs-3);
-  color: var(--foreground-secondary);
+  color:black;
+  /* color: var(--foreground-secondary); */
 }
 
 .mobile-nav .nav-link:hover {
